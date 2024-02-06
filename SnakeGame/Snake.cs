@@ -159,5 +159,22 @@
         {
             Length++;
         }
+
+        public bool SnakeEatsSnake((int x, int y) snakeHeadPosition, List<(int x, int y)> snakePositions) 
+        {
+            var snakePositionsWithoutHead = snakePositions.Take(snakePositions.Count()-1);
+            foreach (var snakePosition in snakePositionsWithoutHead) 
+            {
+                if (snakeHeadPosition == snakePosition)
+                {
+                    return true;
+                }
+                else 
+                {
+                    continue;
+                }
+            }
+            return false;
+        }
     }
 }
