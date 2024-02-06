@@ -22,7 +22,7 @@
 
             do
             {
-                randomWidth = randomNumberGenerator.Next(canvas.StartWidth, canvas.Width);
+                randomWidth = randomNumberGenerator.Next(canvas.StartWidth + 1, canvas.Width - 1);
                 randomHeight = randomNumberGenerator.Next(canvas.StartHeight + 1, canvas.Height -1);
                 if (snakePositions.Any(x => x == (randomWidth, randomHeight)))
                 {
